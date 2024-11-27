@@ -12,10 +12,8 @@ export const generateToken = (userId, res) => {
     sameSite: "strict", // CSRF attacks cross-site request forgery attacks
     secure: process.env.NODE_ENV !== "development",
   });
-<<<<<<< HEAD
-  // console.log(token);
-=======
+
 console.log(token);
->>>>>>> d618737c95c23784466da987dbe602a8595d314f
+
   return token;
 };

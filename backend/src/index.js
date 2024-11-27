@@ -28,17 +28,17 @@ app.use(cookieParser());
 //     credentials:true
 // }))
 app.use(cors({
-    origin:"https://quick-chat-2byme.onrender.com",
+    origin:['http://localhost:5173', 'https://quick-chat-2byme.onrender.com'],
     credentials:true
 }))
 app.get("/", (req, res) => {
     res.send("Server is up and running!");
 });
-<<<<<<< HEAD
+
 console.log(path.join(__dirname, "../frontend", "dist", "index.html"));
-=======
+
 console.log(path.join(__dirname, "../frontend"));
->>>>>>> d618737c95c23784466da987dbe602a8595d314f
+
 app.use("/api/auth",authRoutes);  
 app.use("/api/messages",messageRoutes);  
 if (process.env.NODE_ENV === "production") {

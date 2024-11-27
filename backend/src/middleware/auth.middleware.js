@@ -3,12 +3,10 @@ import User from "../models/user.model.js";
 
 export const protectRoute = async (req, res, next) => {
   try {
-    
-<<<<<<< HEAD
     // console.log(req);
-=======
+
      console.log(req);
->>>>>>> d618737c95c23784466da987dbe602a8595d314f
+
     const token = req.cookies.jwt;
     console.log("Token received:", token);
     // jwt cookie ka name hai 
